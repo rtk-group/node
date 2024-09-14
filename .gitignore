@@ -1,3 +1,5 @@
-
+# ignore node_modules file
 node_modules
+
+# ignore dotenv file
 .env
