@@ -4,7 +4,10 @@ require('dotenv').config();
 const mongourl = process.env.mongodb_url;
 
 // set up to mongodb connection
-mongoose.connect(mongourl,{ssl: true}); 
+mongoose.connect(mongourl,{
+    ssl: true,
+    tlsAllowInvalidCertificates: true
+}); 
 
 const db = mongoose.connection;
 
