@@ -4,11 +4,7 @@ require('dotenv').config();
 const mongourl = process.env.mongodb_url;
 
 // set up to mongodb connection
-mongoose.connect(mongourl,{
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    ssl: true
-}); 
+mongoose.connect(mongourl,{ssl: true}); 
 
 const db = mongoose.connection;
 
