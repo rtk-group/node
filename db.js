@@ -4,10 +4,12 @@ require('dotenv').config();
 const mongourl = process.env.mongodb_url;
 
 // set up to mongodb connection
-mongoose.connect(mongourl,{
-    ssl: true,
-    tlsAllowInvalidCertificates: true
-}); 
+mongoose.connect(mongourl)
+.then(()=>{
+    console.log("hello connection");
+}).catch((err)=>{
+    console.log('hello connection' + err);
+})
 
 const db = mongoose.connection;
 
