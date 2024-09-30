@@ -73,7 +73,7 @@ rout.delete('/:id', async (req, res)=>{
             return res.status(404).json(response);
         }
         console.log("person data is deleted");
-        res.status(200).json();
+        res.status(200).json({"data": "deleted successfully"});
 
     }catch(err){
         res.status(500).json('update server error', err);
